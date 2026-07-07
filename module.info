@@ -1,0 +1,6 @@
+Module: totp
+Version: 1.0.0
+Requires:
+  Libraries: icinga-php-library (>=1.0.0), icinga-php-thirdparty (>=1.0.0)
+Description: Icinga TOTP Web
+ Adds TOTP two-factor authentication to Icinga Web.
