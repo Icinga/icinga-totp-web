@@ -14,7 +14,7 @@ RFC 6238-compatible authenticator app, then enter a 6-digit token on each login.
 ## Documentation
 
 Icinga TOTP Web documentation is available at
-[icinga.com/docs](https://icinga.com/docs/icinga-totp-web/latest/).
+[icinga.com/docs](https://icinga.com/docs/icinga-totp/latest/).
 
 ## License
 
