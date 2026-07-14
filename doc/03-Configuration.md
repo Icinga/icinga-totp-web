@@ -5,11 +5,6 @@
 Connection configuration for the database, which
 [Icinga TOTP Web](https://github.com/Icinga/icinga-totp-web) uses.
 
-!!! tip
-
-    If not already done, initialize your database by following these
-    [instructions](https://icinga.com/docs/icinga-totp-web/latest/doc/02-Installation#setting-up-the-database).
-
 ### Configure via Web UI
 
 1. Create a new resource for the Icinga TOTP Web database via the
