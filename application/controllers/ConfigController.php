@@ -9,6 +9,7 @@ use Icinga\Application\Config;
 use Icinga\Module\Totp\Forms\DatabaseConfigForm;
 use Icinga\Module\Totp\Forms\SettingsConfigForm;
 use Icinga\Web\Notification;
+use Icinga\Web\Session;
 use Icinga\Web\Widget\Tabs;
 use ipl\Html\Contract\Form;
 use ipl\Web\Compat\CompatController;
@@ -25,6 +26,7 @@ class ConfigController extends CompatController
     public function databaseAction(): void
     {
         $form = (new DatabaseConfigForm(Config::module('totp')))
+            ->setCsrfCounterMeasureId(Session::getSession()->getId())
             ->on(Form::ON_SUBMIT, function (DatabaseConfigForm $_): void {
                 Notification::success($this->translate('New configuration has successfully been stored'));
             })->handleRequest($this->getServerRequest());
@@ -37,6 +39,7 @@ class ConfigController extends CompatController
     public function settingsAction(): void
     {
         $form = (new SettingsConfigForm(Config::module('totp')))
+            ->setCsrfCounterMeasureId(Session::getSession()->getId())
             ->on(Form::ON_SUBMIT, function (SettingsConfigForm $_): void {
                 Notification::success($this->translate('New configuration has successfully been stored'));
             })->handleRequest($this->getServerRequest());

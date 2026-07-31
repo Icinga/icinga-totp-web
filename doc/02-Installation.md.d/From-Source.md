@@ -8,7 +8,7 @@ also be met.
 ## Requirements
 
 * PHP (≥8.2)
-* [Icinga Web](https://github.com/Icinga/icingaweb2) (≥2.14)
+* [Icinga Web](https://github.com/Icinga/icingaweb2) (≥2.14.1)
 * [Icinga PHP Library (ipl)](https://github.com/Icinga/icinga-php-library) (≥1.0.0)
 * [Icinga PHP Thirdparty](https://github.com/Icinga/icinga-php-thirdparty) (≥1.0.0)
 * MySQL or PostgreSQL
