@@ -6,8 +6,8 @@
 namespace Icinga\Module\Totp\Controllers;
 
 use Icinga\Application\Config;
-use Icinga\Module\Totp\Forms\DatabaseConfigForm;
-use Icinga\Module\Totp\Forms\SettingsConfigForm;
+use Icinga\Module\Totp\Form\DatabaseConfigForm;
+use Icinga\Module\Totp\Form\SettingsConfigForm;
 use Icinga\Web\Notification;
 use Icinga\Web\Session;
 use Icinga\Web\Widget\Tabs;
