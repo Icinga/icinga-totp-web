@@ -9,6 +9,7 @@ use Icinga\Application\Config;
 use ipl\Sql\Select;
 use ipl\Stdlib\Str;
 use OTPHP\TOTP as TotpLib;
+use SensitiveParameter;
 
 /**
  * TOTP implementation wrapping the OTPHP library
@@ -85,7 +86,7 @@ class Totp implements TotpInterface
      *
      * @return bool
      */
-    public function verify(string $token): bool
+    public function verify(#[SensitiveParameter] string $token): bool
     {
         return $this->totp->verify($token, null, $this->leeway);
     }

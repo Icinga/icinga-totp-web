@@ -5,6 +5,8 @@
 
 namespace Icinga\Module\Totp\Common;
 
+use SensitiveParameter;
+
 /**
  * Contract for TOTP secret management and token verification
  */
@@ -33,7 +35,7 @@ interface TotpInterface
      *
      * @return bool
      */
-    public function verify(string $token): bool;
+    public function verify(#[SensitiveParameter] string $token): bool;
 
     /**
      * Create an instance from an existing base32-encoded secret

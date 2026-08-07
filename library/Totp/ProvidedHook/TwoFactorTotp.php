@@ -29,6 +29,7 @@ use ipl\Web\Compat\DisplayFormElement;
 use ipl\Web\Widget\ActionLink;
 use ipl\Web\Widget\Callout;
 use ipl\Web\Widget\CopyToClipboard;
+use SensitiveParameter;
 
 /**
  * TOTP-based two-factor authentication hook for Icinga Web
@@ -89,7 +90,7 @@ class TwoFactorTotp extends TwoFactorHook
      *
      * @return bool
      */
-    public function verify(User $user, string $token): bool
+    public function verify(User $user, #[SensitiveParameter] string $token): bool
     {
         if ($this->totp === null && ($this->totp = Totp::fromDb($user->getUsername())) === null) {
             return false;
