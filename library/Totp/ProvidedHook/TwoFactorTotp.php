@@ -13,7 +13,7 @@ use Icinga\Module\Totp\Common\QRCodeRendererInterface;
 use Icinga\Module\Totp\Common\SecretStore;
 use Icinga\Module\Totp\Common\Totp;
 use Icinga\Module\Totp\Common\TotpInterface;
-use Icinga\Module\Totp\Web\Form\Validator\TokenValidator;
+use Icinga\Module\Totp\Validator\TokenValidator;
 use Icinga\User;
 use Icinga\Web\Session;
 use ipl\Html\Attributes;

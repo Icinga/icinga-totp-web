@@ -3,7 +3,7 @@
 // SPDX-FileCopyrightText: 2026 Icinga GmbH <https://icinga.com>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-namespace Icinga\Module\Totp\Forms;
+namespace Icinga\Module\Totp\Form;
 
 use Icinga\Data\ResourceFactory;
 use Icinga\Web\Form\ConfigForm;
