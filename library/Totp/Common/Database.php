@@ -15,6 +15,7 @@ use ipl\Sql\Expression;
 use ipl\Sql\QueryBuilder;
 use ipl\Sql\Select;
 use PDO;
+use Pdo\Mysql;
 
 /**
  * Database connection provider for the TOTP module
@@ -54,7 +55,7 @@ abstract class Database
 
         $config->options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ];
         if ($config->db === 'mysql') {
-            $config->options[Pdo\Mysql::ATTR_INIT_COMMAND] = "SET SESSION SQL_MODE='STRICT_TRANS_TABLES"
+            $config->options[Mysql::ATTR_INIT_COMMAND] = "SET SESSION SQL_MODE='STRICT_TRANS_TABLES"
                 . ",NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'";
         }
 
